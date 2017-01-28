@@ -1,0 +1,109 @@
+[Project]
+Assembler=nasm
+Type= Win32 App No Res
+Description=my asm library
+Backup=$P\Bak\
+Group=1
+GroupExpand=1
+Ver.rc=1
+Debug=0
+[Files]
+1=AsmLib.Asm
+1001=String.asm
+[MakeFiles]
+0=AsmLib.rap
+1=AsmLib.rc
+2=AsmLib.Asm
+3=AsmLib.obj
+4=AsmLib.res
+5=AsmLib.exe
+6=AsmLib.def
+7=AsmLib.dll
+8=AsmLib.txt
+9=AsmLib.lib
+10=AsmLib.mak
+11=AsmLib.hla
+12=String.asm
+[MakeDef]
+Menu=0,1,1,1,1,1,1,1,1,0
+1=4,O,$B\GORC,1
+2=3,O,$B\NASMW -fobj,2
+3=5,O,$B\ALINK -oPE -o $5 *.obj
+4=0,0,,5
+5=rsrc.obj,O,$B\CVTRES,rsrc.res
+7=0,0,\OllyDbg\OllyDbg,5
+6=*.obj,O,$B\NASMW -fobj,*.asm
+11=4,O,$B\GORC,1
+12=3,O,$B\NASMW -fobj,2
+13=5,O,$B\ALINK -oPE -o $5,3
+14=0,0,,5
+15=rsrc.obj,O,$B\CVTRES,rsrc.res
+16=*.obj,O,$B\NASMW -fobj,*.asm
+17=0,0,\OllyDbg\OllyDbg,5
+[Group]
+Group=Added files,Assembly,Resources,Misc,Modules
+1=2
+1001=1
+[VerInf]
+FV=0.0.2.5
+FileVersion=0.0.2.5
+PV=0.0.2.5
+ProductVersion=0.0.2.5
+[Size]
+1001=0,0,0,0,3223
+1=0,0,0,0,576
+[VersionControl]
+Settings=1279
+Milestones=129
+MilestoneEvery=10
+MilestoneEveryCurrent=0
+MilestoneOnBuild=0.0.0.0
+MilestoneOnTime=2
+MilestoneOnDate=0
+MilestoneOnDateWhen=1
+MilestoneOnDateStatus=0
+MilestoneOnDateDate=22
+MilestoneOnDateTimeYear=2004
+MilestoneOnDateTimeMonth=3
+MilestoneOnDateTimeDate=10
+MilestoneOnDateTimeHour=1
+MilestoneOnDateTimeMin=21
+MilestoneOnDateTimeSec=3
+MilestoneOnDateTimeStatus=0
+BackupLocation=D:\Programme\RadASM\Nasm\Projects\VCBackups\
+CompressionLevel=0
+DefaultComment=Project $N, $Z, Backup Created On $D At $T.
+ExcludeExt1=\
+ExcludeExt2=\
+ExcludeExt3=\
+ExcludeExt4=\
+FileVerLength=4
+FileVer2Range=0
+FileVer3Range=0
+FileVer4Range=0
+ProductVerLength=4
+ProductVer2Range=0
+ProductVer3Range=0
+ProductVer4Range=0
+[Colref]
+0=00FFFFFF
+1=00FFFFFF
+2=00FFFFFF
+3=00FFFFFF
+4=00FFFFFF
+5=00FFFFFF
+6=00FFFFFF
+7=00FFFFFF
+[BookMark]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+[BreakPoint]
+0=
